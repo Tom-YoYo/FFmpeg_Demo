@@ -89,7 +89,7 @@ typedef enum AVRounding AVRounding;
         //复制AVCodecContext的设置（Copy the settings of AVCodecContext）
         ret = avcodec_copy_context(out_stream->codec, in_stream->codec);
         if (ret < 0) {
-            printf( "Failed to copy context from input to output stream codec context\n");
+            printf("Failed to copy context from input to output stream codec context\n");
             goto end;
         }
         out_stream->codec->codec_tag = 0;

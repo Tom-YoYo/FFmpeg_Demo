@@ -39,6 +39,7 @@
 		5A19AED21F20A4BC001265B5 /* SeparateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A19AED11F20A4BC001265B5 /* SeparateController.m */; };
 		5A19AED51F20A6D5001265B5 /* LocationStreamController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A19AED41F20A6D5001265B5 /* LocationStreamController.m */; };
 		5A19AED81F20A81A001265B5 /* CameraStreamController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A19AED71F20A81A001265B5 /* CameraStreamController.m */; };
+		5A6ED9631F2EFF7600246328 /* ReadCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6ED9621F2EFF7600246328 /* ReadCameraController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,8 @@
 		5A19AED41F20A6D5001265B5 /* LocationStreamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationStreamController.m; sourceTree = "<group>"; };
 		5A19AED61F20A81A001265B5 /* CameraStreamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraStreamController.h; sourceTree = "<group>"; };
 		5A19AED71F20A81A001265B5 /* CameraStreamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraStreamController.m; sourceTree = "<group>"; };
+		5A6ED9611F2EFF7600246328 /* ReadCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadCameraController.h; sourceTree = "<group>"; };
+		5A6ED9621F2EFF7600246328 /* ReadCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadCameraController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +297,8 @@
 				5A19AED41F20A6D5001265B5 /* LocationStreamController.m */,
 				5A19AED61F20A81A001265B5 /* CameraStreamController.h */,
 				5A19AED71F20A81A001265B5 /* CameraStreamController.m */,
+				5A6ED9611F2EFF7600246328 /* ReadCameraController.h */,
+				5A6ED9621F2EFF7600246328 /* ReadCameraController.m */,
 				5A19AE031F2085A2001265B5 /* Main.storyboard */,
 				5A19AE061F2085A2001265B5 /* Assets.xcassets */,
 				5A19AE081F2085A2001265B5 /* LaunchScreen.storyboard */,
@@ -682,6 +687,7 @@
 				5A19AECF1F209A1C001265B5 /* SJMoiveObject.m in Sources */,
 				5A19ADFF1F2085A2001265B5 /* AppDelegate.m in Sources */,
 				5A19AEB11F208A1A001265B5 /* ConvertFormatController.m in Sources */,
+				5A6ED9631F2EFF7600246328 /* ReadCameraController.m in Sources */,
 				5A19AED21F20A4BC001265B5 /* SeparateController.m in Sources */,
 				5A19AED51F20A6D5001265B5 /* LocationStreamController.m in Sources */,
 				5A19ADFC1F2085A2001265B5 /* main.m in Sources */,
@@ -928,6 +934,7 @@
 				5A19AE261F2085A2001265B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A19AE271F2085A2001265B5 /* Build configuration list for PBXNativeTarget "FFmpeg_DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -936,6 +943,7 @@
 				5A19AE291F2085A2001265B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A19AE2A1F2085A2001265B5 /* Build configuration list for PBXNativeTarget "FFmpeg_DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -944,6 +952,7 @@
 				5A19AE2C1F2085A2001265B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

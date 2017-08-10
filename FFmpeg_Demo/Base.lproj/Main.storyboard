@@ -170,6 +170,32 @@
                                             <segue destination="sW6-aL-jhZ" kind="push" id="e0c-aY-V1q"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0o8-hp-ihB">
+                                        <rect key="frame" x="0.0" y="255" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0o8-hp-ihB" id="RKK-Yz-G61">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="读取摄像头" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmd-55-6gf">
+                                                    <rect key="frame" x="8" y="11" width="87" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="sI6-tI-EBo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kmd-55-6gf" firstAttribute="leading" secondItem="RKK-Yz-G61" secondAttribute="leadingMargin" id="BWT-P3-919"/>
+                                                <constraint firstItem="kmd-55-6gf" firstAttribute="top" secondItem="RKK-Yz-G61" secondAttribute="topMargin" constant="3" id="qDa-St-z6L"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="L4f-ov-AvZ" kind="push" id="MyG-5f-U54"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -257,6 +283,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eg2-JS-UwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2204" y="-687.7061469265368"/>
+        </scene>
+        <!--读取摄像头-->
+        <scene sceneID="1du-Yf-nCU">
+            <objects>
+                <viewController id="L4f-ov-AvZ" customClass="ReadCameraController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NIa-Ql-Ovp"/>
+                        <viewControllerLayoutGuide type="bottom" id="wOR-HZ-4Fv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="haW-ww-tW9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lsu-dv-ydF">
+                                <rect key="frame" x="16" y="121" width="343" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="boo-T5-NI6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lsu-dv-ydF" firstAttribute="trailing" secondItem="haW-ww-tW9" secondAttribute="trailingMargin" id="WQb-Hc-tHL"/>
+                            <constraint firstItem="Lsu-dv-ydF" firstAttribute="leading" secondItem="haW-ww-tW9" secondAttribute="leadingMargin" id="kVR-YO-jLU"/>
+                            <constraint firstItem="Lsu-dv-ydF" firstAttribute="top" secondItem="NIa-Ql-Ovp" secondAttribute="bottom" constant="57" id="zOx-A1-cyG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="读取摄像头" id="6sH-uQ-GTK"/>
+                    <connections>
+                        <outlet property="imgView" destination="Lsu-dv-ydF" id="Nvk-zV-Q3I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GBu-GO-UKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="46"/>
         </scene>
         <!--音视频分离-->
         <scene sceneID="c4x-aj-kyL">

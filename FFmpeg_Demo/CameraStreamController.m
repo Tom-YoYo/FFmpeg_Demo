@@ -60,7 +60,7 @@
     
     av_dict_set(&options, "video_size", "192x144", 0);
     av_dict_set(&options, "framerate", "30", 0);
-    av_dict_set(&options, "pixel_format", "bgr0", 0);
+    av_dict_set(&options, "pixel_format", "nv12", 0);
     /*
      { "video_size", "set frame size", OFFSET(width), AV_OPT_TYPE_IMAGE_SIZE, {.str = NULL}, 0, 0, DEC },
      { "pixel_format", "set pixel format", OFFSET(pixel_format), AV_OPT_TYPE_STRING, {.str = "yuv420p"}, 0, 0, DEC },
@@ -189,8 +189,8 @@
             AVRational time_base_q={1,AV_TIME_BASE};
             int64_t pts_time = av_rescale_q(pkt.dts, time_base, time_base_q);
             int64_t now_time = av_gettime() - start_time;
-//            if (pts_time > now_time)
-//                av_usleep(pts_time - now_time);
+            if (pts_time > now_time)
+                av_usleep(pts_time - now_time);
             
         }
         in_stream  = ifmt_ctx->streams[pkt.stream_index];

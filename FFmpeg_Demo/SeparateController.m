@@ -47,16 +47,16 @@ typedef enum AVRounding AVRounding;
     const char *out_filename_a = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"cuc_ieschool.aac"].UTF8String;
     
     av_register_all();
-    //Input
+    //Input  初始化ifmt_ctx
     if ((ret = avformat_open_input(&ifmt_ctx, in_filename, 0, 0)) < 0) {
         printf( "Could not open input file.");
         goto end;
     }
+    //读取音视频流信息写到ifmt_ctx
     if ((ret = avformat_find_stream_info(ifmt_ctx, 0)) < 0) {
         printf( "Failed to retrieve input stream information");
         goto end;
     }
-    
     //Output
     avformat_alloc_output_context2(&ofmt_ctx_v, NULL, NULL, out_filename_v);
     if (!ofmt_ctx_v) {
